@@ -18,7 +18,7 @@ pipeline {
             steps {
                withCredentials([string(credentialsId: 'node_app_docker_password', variable: 'node_app_docker_pass')]) {
                     script {
-                        bat "docker login -u nimsarawick -p %samindocker%"
+                        bat "docker login -u nimsarawick -p %node_app_docker_pass%"
                     }
                 }
             }
